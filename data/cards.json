@@ -1,0 +1,534 @@
+[
+    {
+        "card_id": 7,
+        "name": "Дон",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 8,
+        "name": "Нокс",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 9,
+        "name": "Фати",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 10,
+        "name": "Дармик",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 11,
+        "name": "Дэвис",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 12,
+        "name": "Блег Оклов",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 13,
+        "name": "Игорян",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 14,
+        "name": "Креонон",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 15,
+        "name": "Ленгли",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 16,
+        "name": "Фанта",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 17,
+        "name": "Соломон",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 18,
+        "name": "Джеймс",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 19,
+        "name": "Мальма",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 20,
+        "name": "Хелен",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 21,
+        "name": "Кисторм",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 22,
+        "name": "Хитоми",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 23,
+        "name": "Невикс",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 24,
+        "name": "Фрост",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 25,
+        "name": "Хаби",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 26,
+        "name": "Стеф",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 27,
+        "name": "Меллстрой",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 28,
+        "name": "Федос",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 29,
+        "name": "Рустик",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 30,
+        "name": "Нэйд",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 31,
+        "name": "Кари",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 32,
+        "name": "Рашер",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 33,
+        "name": "Дерз",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 34,
+        "name": "Бароу",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 35,
+        "name": "Вальверде",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 36,
+        "name": "Салио",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 37,
+        "name": "Вельфран",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 38,
+        "name": "Мексикан",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 39,
+        "name": "Шелби",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 40,
+        "name": "Хушпаров",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 41,
+        "name": "Незтис",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 42,
+        "name": "Гулик",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 43,
+        "name": "Плазма",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 44,
+        "name": "Мбей",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 45,
+        "name": "Ват",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 46,
+        "name": "Косатка",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 47,
+        "name": "Веран",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 48,
+        "name": "Ноляша",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 49,
+        "name": "Бруно",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 50,
+        "name": "Модрич",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 51,
+        "name": "Сантос",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 52,
+        "name": "Максим",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 53,
+        "name": "Линукс",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 54,
+        "name": "Гаглиарди",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 55,
+        "name": "Сиба",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 56,
+        "name": "Гигатик",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 57,
+        "name": "Скоп",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 58,
+        "name": "Бабиджон",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 59,
+        "name": "Нич",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 60,
+        "name": "Стиляга",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 61,
+        "name": "Борз",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 62,
+        "name": "Саидка",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 63,
+        "name": "Физзик",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 64,
+        "name": "Серхиньо",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 65,
+        "name": "Диззик",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 66,
+        "name": "Самир",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 67,
+        "name": "Свипер",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 68,
+        "name": "Промес",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 69,
+        "name": "Хан",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 70,
+        "name": "Вильям",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 71,
+        "name": "Фирикс",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 72,
+        "name": "Вальверде",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 73,
+        "name": "Бабиджон",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 74,
+        "name": "Даркнес",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 75,
+        "name": "Собакен",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 76,
+        "name": "Некро",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 77,
+        "name": "Диффи",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 78,
+        "name": "Фрол",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 79,
+        "name": "Чарди",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 80,
+        "name": "Роникс",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 81,
+        "name": "Кулгай",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 82,
+        "name": "Сапрун",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    }
+]
