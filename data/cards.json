@@ -530,5 +530,82 @@
         "rarity": "common",
         "rating": 60,
         "price": 0
+    },
+    {
+        "card_id": 83,
+        "name": "Пепс",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 84,
+        "name": "Тима",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 85,
+        "name": "Леонардо",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 86,
+        "name": "Фреш",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 87,
+        "name": "Вортик",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 88,
+        "name": "Броус",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 89,
+        "name": "Хаджейн",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 90,
+        "name": "Крионель",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 91,
+        "name": "Кракен",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 92,
+        "name": "Кари",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 93,
+        "name": "Рафик",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
     }
 ]

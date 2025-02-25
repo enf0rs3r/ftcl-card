@@ -402,3 +402,25 @@ def get_common_cards():
 
     conn.close()
     return cards
+
+def get_last_endless_open(user_id):
+    """Получает время последнего открытия бесконечного пака"""
+    conn = sqlite3.connect("database.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT last_endless_open FROM users WHERE user_id = ?", (user_id,))
+    result = cursor.fetchone()
+    conn.close()
+    return datetime.strptime(result[0], "%Y-%m-%d %H:%M:%S") if result and result[0] else None
+
+def update_last_endless_open(user_id):
+    """Обновляет время последнего открытия бесконечного пака"""
+    conn = sqlite3.connect("database.db")
+    cursor = conn.cursor()
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    cursor.execute("UPDATE users SET last_endless_open = ? WHERE user_id = ?", (now, user_id))
+    
+    if cursor.rowcount == 0:
+        cursor.execute("INSERT INTO users (user_id, last_endless_open) VALUES (?, ?)", (user_id, now))
+    
+    conn.commit()
+    conn.close()

@@ -14,7 +14,7 @@ RARITY_CHANCES = {
     "legendary": 3
 }
 
-PACK_COOLDOWN = timedelta(hours=10)  # 10 часов задержка
+PACK_COOLDOWN = timedelta(hours=7)  # 10 часов задержка
 
 @router.chat_member()
 async def welcome_bot(event: ChatMemberUpdated):

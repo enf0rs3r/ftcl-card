@@ -17,7 +17,7 @@ RARITY_CHANCES = {
 }
 
 # Время ожидания между открытиями
-PACK_COOLDOWN = timedelta(hours=10)
+PACK_COOLDOWN = timedelta(hours=7)
 
 def load_cards():
     """Загружает карточки из cards.json"""
