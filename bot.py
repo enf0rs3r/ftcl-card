@@ -7,7 +7,9 @@ from database.db import create_tables
 from handlers import trade
 from handlers import group_handler
 from handlers import endless_pack
-
+import os
+from flask import Flask
+from threading import Thread
 
 create_tables()
 
@@ -23,6 +25,16 @@ dp.include_router(trade.router)
 dp.include_router(group_handler.router)
 dp.include_router(endless_pack.router)
 
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "I'm alive!"
+
+def run_server():
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+
+Thread(target=run_server, daemon=True).start()
 
 async def main():
     await bot.delete_webhook(drop_pending_updates=True)
