@@ -1,15 +1,12 @@
 import logging
 import asyncio
-from bot_instance import bot, dp  # Импортируем уже созданные bot и dp
-from handlers import start, shop, profile
-from handlers import open_pack
-from database.db import create_tables
-from handlers import trade
-from handlers import group_handler
-from handlers import endless_pack
 import os
-from flask import Flask
+from time import sleep
 from threading import Thread
+from flask import Flask
+from bot_instance import bot, dp  # Импортируем уже созданные bot и dp
+from handlers import start, shop, profile, open_pack, trade, group_handler, endless_pack
+from database.db import create_tables
 
 create_tables()
 
@@ -32,7 +29,12 @@ def home():
     return "I'm alive!"
 
 def run_server():
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    while True:
+        try:
+            app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+        except Exception as e:
+            print(f"Flask error: {e}")
+        sleep(5)  # Пауза, чтобы Flask не падал мгновенно
 
 Thread(target=run_server, daemon=True).start()
 
@@ -41,11 +43,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    import asyncio
-
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        print("Bot stopped manually")
-
-    
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
