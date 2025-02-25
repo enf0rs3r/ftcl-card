@@ -34,7 +34,7 @@ def get_random_card():
     filtered_cards = [card for card in cards if card["rarity"] == rarity]
     return random.choice(filtered_cards) if filtered_cards else None
 
-@router.message(lambda msg: msg.chat.type in ["group", "supergroup"] and msg.text and msg.text.lower() == "фтклкарта")
+@router.message(lambda msg: msg.chat.type in ["group", "supergroup"] and msg.text and msg.text.lower() in ["фтклкарта", "ебалай, дай мне карту", "ну и где моя карта?"])
 async def group_pack_handler(message: Message):
     user_id = message.from_user.id
     last_open_time = get_last_open_time(user_id)
