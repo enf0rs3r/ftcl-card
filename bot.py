@@ -15,6 +15,7 @@ create_tables()
 logging.basicConfig(level=logging.INFO)
 
 # Подключаем обработчики
+dp.update.middleware(SubscriptionMiddleware())
 dp.include_router(start.router)
 dp.include_router(shop.router)
 dp.include_router(profile.router)
