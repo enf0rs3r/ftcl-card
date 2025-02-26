@@ -1,60 +1,67 @@
 import json
-import random
-from aiogram import Router, F
-from aiogram.types import Message, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
-from aiogram.filters import Command
+from aiogram import Router, types
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile
+from aiogram.filters import CallbackQuery
 from database.db import add_card_to_collection
+import random
 
 router = Router()
 
-# Загружаем данные паков
+# Загружаем данные о паках
 def load_packs():
     with open("data/packs.json", "r", encoding="utf-8") as file:
         return json.load(file)
 
-packs = load_packs()
-endless_pack = next(pack for pack in packs if pack["pack_id"] == "endless")
-
-# Загружаем карточки
+# Загружаем данные о картах
 def load_cards():
     with open("data/cards.json", "r", encoding="utf-8") as file:
         return json.load(file)
 
-# Выбор карты только с "common" редкостью
+# Фильтруем карты только для бесконечного пака (только common)
 def get_common_card():
     cards = load_cards()
     common_cards = [card for card in cards if card["rarity"] == "common"]
     return random.choice(common_cards) if common_cards else None
 
-# Обработчик информации о паке
-@router.message(Command("endless_pack"))
-async def endless_pack_info(message: Message):
-    photo_path = f"photo/{endless_pack['photo']}"
-    caption = (f"♾ <b>{endless_pack['name']}</b>\n"
-               f"💰 Цена: {endless_pack['price']} монет\n"
-               f"⏳ Интервал: {endless_pack['interval']} часов\n"
-               f"🎲 Шансы:\n" +
-               "\n".join([f"{rarity.capitalize()}: {chance}%" for rarity, chance in endless_pack["chances"].items()]))
+# Обработчик для показа информации о бесконечном паке
+@router.message(lambda message: message.text == "♾ Бесконечный пак")
+async def endless_pack_info(message: types.Message):
+    packs = load_packs()
+    endless_pack = next((p for p in packs if p["pack_id"] == "endless"), None)
+
+    if not endless_pack:
+        await message.answer("Ошибка: информация о паке не найдена.")
+        return
+
+    photo = FSInputFile(f"photo/{endless_pack['photo']}")
+    text = (f"📦 <b>{endless_pack['name']}</b>\n"
+            f"💰 Цена: {endless_pack['price']} монет\n"
+            f"⏳ Интервал: Нет ограничений\n"
+            f"🎲 Шансы:\n"
+            + "\n".join([f"  - {rarity.capitalize()}: {chance}%" for rarity, chance in endless_pack["chances"].items()]))
 
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🃏 Открыть пак", callback_data="open_endless_pack")]
+        [InlineKeyboardButton(text="🎁 Открыть", callback_data="open_endless_pack")]
     ])
 
-    await message.answer_photo(FSInputFile(photo_path), caption=caption, reply_markup=keyboard)
+    await message.answer_photo(photo, caption=text, reply_markup=keyboard)
 
-# Обработчик открытия бесконечного пака
-@router.callback_query(F.data == "open_endless_pack")
-async def open_endless_pack(callback_query):
-    user_id = callback_query.from_user.id
+# Обработчик нажатия кнопки "Открыть" для бесконечного пака
+@router.callback_query(lambda c: c.data == "open_endless_pack")
+async def open_endless_pack(call: CallbackQuery):
+    user_id = call.from_user.id
     card = get_common_card()
 
     if not card:
-        await callback_query.message.answer("Ошибка! Не удалось открыть пак.")
+        await call.message.answer("Не удалось открыть бесконечный пак, попробуйте позже.")
         return
 
     add_card_to_collection(user_id, card["card_id"])
-    
+
     card_image = FSInputFile(f"photo/{card['card_id']}.jpg")
-    caption = f"🎴 <b>{card['name']}</b>\n⭐ Редкость: {card['rarity'].capitalize()}\n🏆 ID карты: {card['card_id']}\n🔥 Рейтинг: {card['rating']}"
-    
-    await callback_query.message.answer_photo(card_image, caption=caption)
+    caption = (f"🎴 <b>{card['name']}</b>\n"
+               f"⭐ Редкость: {card['rarity'].capitalize()}\n"
+               f"🏆 ID карты: {card['card_id']}\n"
+               f"🔥 Рейтинг: {card['rating']}")
+
+    await call.message.answer_photo(card_image, caption=caption)
