@@ -27,7 +27,7 @@ async def start_handler(message: types.Message):
     
     # Приветствие и главное меню
     await message.answer(
-        "Привет! Ты попал в бота карточек ФТКЛ. Выбери действие:\n\nБот выполнен Энфорсером (@enfhub) и Педро (@mrazisyka).",
+        "Привет! Ты попал в бота карточек ФТКЛ. Выбери действие:\n\nБот выполнен Энфорсером (@enfhub) и Педро (@mrazisyka). Подпишись на наш канал, там самые свежие инсайды (@ftclcards)",
         reply_markup=menu
     )
 
