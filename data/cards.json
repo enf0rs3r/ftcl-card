@@ -894,6 +894,97 @@
         "rarity": "rare",
         "rating": 75,
         "price": 0
+    },
+    {
+        "card_id": 135,
+        "name": "Фонт",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 136,
+        "name": "Лионель",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 0
+    },
+    {
+        "card_id": 137,
+        "name": "Незекс",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 0
+    },
+    {
+        "card_id": 138,
+        "name": "Гави",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 0
+    },
+    {
+        "card_id": 139,
+        "name": "Симакин",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 140,
+        "name": "Спикс",
+        "rarity": "common",
+        "rating": 60,
+        "price": 0
+    },
+    {
+        "card_id": 141,
+        "name": "Тревис",
+        "rarity": "common",
+        "rating": 50,
+        "price": 0
+    },
+    {
+        "card_id": 142,
+        "name": "Уко",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
+    },
+    {
+        "card_id": 143,
+        "name": "Грони",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 144,
+        "name": "Макеба",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 145,
+        "name": "Кайзикс",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 146,
+        "name": "Грили",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 0
+    },
+    {
+        "card_id": 147,
+        "name": "Стермик",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 0
     }
 ]
 
