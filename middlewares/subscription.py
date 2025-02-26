@@ -4,7 +4,7 @@ from aiogram import Bot
 from aiogram.exceptions import TelegramBadRequest
 from typing import Callable, Dict, Any, Awaitable
 
-CHANNEL_USERNAME = "@your_channel"  # Замени на юзернейм своего канала
+CHANNEL_USERNAME = "@ftclcards"  # Замени на юзернейм своего канала
 
 async def is_subscribed(bot: Bot, user_id: int) -> bool:
     """ Проверяет, подписан ли пользователь на канал """
