@@ -1,8 +1,7 @@
 import json
 import random
 from aiogram import Router, types
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile
-from aiogram.filters import CallbackQuery
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile, CallbackQuery
 from database.db import add_card_to_collection, get_last_open_time, update_last_open_time
 from datetime import datetime, timedelta
 
