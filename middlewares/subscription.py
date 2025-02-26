@@ -4,7 +4,7 @@ from aiogram import Bot
 from aiogram.exceptions import TelegramBadRequest
 from typing import Callable, Dict, Any, Awaitable
 
-CHANNEL_USERNAME = "@ftclcards"  # Замени на юзернейм своего канала
+CHANNEL_USERNAME = "@your_channel"  # Замени на юзернейм своего канала
 
 async def is_subscribed(bot: Bot, user_id: int) -> bool:
     """ Проверяет, подписан ли пользователь на канал """
@@ -28,9 +28,28 @@ class SubscriptionMiddleware(BaseMiddleware):
 
         if not await is_subscribed(bot, user_id):
             keyboard = InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text="🔔 Подписаться", url=f"https://t.me/{CHANNEL_USERNAME[1:]}")]
+                [InlineKeyboardButton(text="🔔 Подписаться", url=f"https://t.me/{CHANNEL_USERNAME[1:]}")],
+                [InlineKeyboardButton(text="✅ Проверить подписку", callback_data="check_subscription")]
             ])
             await bot.send_message(user_id, "❌ Чтобы пользоваться ботом, подпишитесь на канал!", reply_markup=keyboard)
             return  # Блокируем выполнение команды
 
         return await handler(event, data)  # Если подписан, продолжаем обработку
+
+# Обработчик кнопки "Проверить подписку"
+from aiogram import Router, types
+
+router = Router()
+
+@router.callback_query(lambda c: c.data == "check_subscription")
+async def check_subscription(call: types.CallbackQuery, bot: Bot):
+    user_id = call.from_user.id
+
+    if await is_subscribed(bot, user_id):
+        await call.message.edit_text("✅ Вы подписаны! Теперь можете пользоваться ботом.")
+    else:
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="🔔 Подписаться", url=f"https://t.me/{CHANNEL_USERNAME[1:]}")],
+            [InlineKeyboardButton(text="✅ Проверить подписку", callback_data="check_subscription")]
+        ])
+        await call.message.edit_text("❌ Вы всё ещё не подписаны! Подпишитесь и попробуйте снова.", reply_markup=keyboard)
