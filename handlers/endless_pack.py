@@ -1,7 +1,6 @@
 import json
 from aiogram import Router, types
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile
-from aiogram.filters import CallbackQuery
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile, CallbackQuery
 from database.db import add_card_to_collection
 import random
 
