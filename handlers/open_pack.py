@@ -10,8 +10,9 @@ router = Router()
 
 # Загружаем данные о паках
 def load_packs():
+    """Загружает список паков из packs.json"""
     with open("data/packs.json", "r", encoding="utf-8") as file:
-        return json.load(file)
+        return json.load(file)  # Загружаем как список
 
 packs = load_packs()
 PACK_COOLDOWN = timedelta(hours=packs["normal_pack"]["interval"])  # 7 часов
