@@ -5,14 +5,16 @@ from aiogram.exceptions import TelegramBadRequest
 from typing import Callable, Dict, Any, Awaitable
 
 CHANNEL_USERNAME = "@ftclcards"  # Замени на юзернейм своего канала
+CHANNEL_ID = -1002329643173  # Замените на реальный айди канала
 
 async def is_subscribed(bot: Bot, user_id: int) -> bool:
-    """ Проверяет, подписан ли пользователь на канал """
+    """ Проверяет, подписан ли пользователь на канал по ID """
     try:
-        member = await bot.get_chat_member(CHANNEL_USERNAME, user_id)
+        member = await bot.get_chat_member(CHANNEL_ID, user_id)
         return member.status in ["member", "administrator", "creator"]
     except TelegramBadRequest:
         return False
+
 
 class SubscriptionMiddleware(BaseMiddleware):
     """ Middleware для проверки подписки перед любыми командами """
