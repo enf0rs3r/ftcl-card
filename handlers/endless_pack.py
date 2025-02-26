@@ -1,10 +1,17 @@
 import json
+import random
+from datetime import datetime, timedelta
 from aiogram import Router, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile, CallbackQuery
 from database.db import add_card_to_collection
-import random
 
 router = Router()
+
+# Словарь для хранения времени последнего открытия пака
+user_cooldowns = {}
+
+# Время задержки (1.5 секунды)
+COOLDOWN_TIME = timedelta(seconds=1.5)
 
 # Загружаем данные о паках
 def load_packs():
@@ -35,7 +42,7 @@ async def endless_pack_info(message: types.Message):
     photo = FSInputFile(f"photo/{endless_pack['photo']}")
     text = (f"📦 <b>{endless_pack['name']}</b>\n"
             f"💰 Цена: {endless_pack['price']} монет\n"
-            f"⏳ Интервал: Нет ограничений\n"
+            f"⏳ Интервал: Нет ограничений, конечно, кроме спама\n"
             f"🎲 Шансы:\n"
             + "\n".join([f"  - {rarity.capitalize()}: {chance}%" for rarity, chance in endless_pack["chances"].items()]))
 
@@ -45,10 +52,23 @@ async def endless_pack_info(message: types.Message):
 
     await message.answer_photo(photo, caption=text, reply_markup=keyboard)
 
-# Обработчик нажатия кнопки "Открыть" для бесконечного пака
+# Обработчик нажатия кнопки "Открыть" для бесконечного пака с анти-спамом
 @router.callback_query(lambda c: c.data == "open_endless_pack")
 async def open_endless_pack(call: CallbackQuery):
     user_id = call.from_user.id
+    current_time = datetime.now()
+
+    # Проверка на спам
+    if user_id in user_cooldowns:
+        last_time = user_cooldowns[user_id]
+        if current_time - last_time < COOLDOWN_TIME:
+            await call.answer("⏳ Подожди немного перед следующим открытием, спамер!", show_alert=True)
+            return  # Прерываем выполнение команды
+
+    # Обновляем время последнего открытия
+    user_cooldowns[user_id] = current_time
+
+    # Открываем карту
     card = get_common_card()
 
     if not card:
