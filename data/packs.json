@@ -1,0 +1,26 @@
+[
+     {
+         "pack_id": "standard",
+         "name": "Обычный пак",
+         "price": 0,
+         "interval": 7,
+         "photo": "standard_pack.jpg",
+         "chances": {
+             "common": 70,
+             "rare": 17,
+             "epic": 10,
+             "legendary": 3
+         }
+     },
+     {
+         "pack_id": "endless",
+         "name": "Бесконечный пак",
+         "price": 0,
+         "interval": 0,
+         "photo": "endless_pack.jpg",
+         "chances": {
+             "common": 100
+         }
+     }
+]
+ 
