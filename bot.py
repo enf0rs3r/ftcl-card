@@ -7,6 +7,7 @@ from threading import Thread
 from bot_instance import bot, dp
 from handlers import start, shop, profile, open_pack, trade, group_handler, endless_pack
 from database.db import create_tables
+from middlewares.subscription import SubscriptionMiddleware
 
 create_tables()
 
@@ -14,6 +15,7 @@ create_tables()
 logging.basicConfig(level=logging.INFO)
 
 # Подключаем обработчики
+dp.update.middleware(SubscriptionMiddleware())
 dp.include_router(start.router)
 dp.include_router(shop.router)
 dp.include_router(profile.router)
