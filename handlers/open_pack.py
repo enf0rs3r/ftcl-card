@@ -68,23 +68,30 @@ async def open_normal_pack(call: CallbackQuery):
     last_open_time = get_last_open_time(user_id)
     cooldown = timedelta(hours=normal_pack["interval"])
 
+    print(f"[DEBUG] last_open_time({user_id}) = {last_open_time}")  # Проверяем
+
     if last_open_time:
-        last_open_time = datetime.strptime(last_open_time, "%Y-%m-%d %H:%M:%S.%f")
-        remaining_time = cooldown - (datetime.now() - last_open_time)
+        try:
+            last_open_time = datetime.strptime(last_open_time, "%Y-%m-%d %H:%M:%S.%f")
+            remaining_time = cooldown - (datetime.now() - last_open_time)
 
-        if remaining_time > timedelta(0):  # Если время ещё не вышло
-            hours, remainder = divmod(remaining_time.seconds, 3600)
-            minutes = remainder // 60
-            await call.message.answer(f"⌛ Вы недавно открывали пак. Подождите ещё {hours} ч {minutes} мин!")
-            return
+            print(f"[DEBUG] remaining_time({user_id}) = {remaining_time}")  # Логируем
 
+            if remaining_time > timedelta(0):
+                hours, remainder = divmod(remaining_time.seconds, 3600)
+                minutes = remainder // 60
+                await call.message.answer(f"⌛ Вы недавно открывали пак. Подождите ещё {hours} ч {minutes} мин!")
+                return
+        except ValueError as e:
+            print(f"[ERROR] Ошибка формата времени: {e}")
+
+    update_last_open_time(user_id)  
     card = get_random_card(normal_pack["chances"])
 
     if not card:
         await call.message.answer("Не удалось открыть пак, попробуйте позже.")
         return
 
-    update_last_open_time(user_id)
     add_card_to_collection(user_id, card["card_id"])
 
     card_image = FSInputFile(f"photo/{card['card_id']}.jpg")

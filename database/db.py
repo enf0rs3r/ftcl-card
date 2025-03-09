@@ -146,19 +146,31 @@ def add_card_to_inventory(user_id, card_id):
     conn.commit()
     conn.close()
 
-# Получение времени последнего открытия пака
 def get_last_open_time(user_id):
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute("SELECT last_open_time FROM users WHERE user_id = ?", (user_id,))
     last_open_time = cursor.fetchone()
     conn.close()
-    return last_open_time[0] if last_open_time else None
+
+    print(f"[DEBUG] get_last_open_time({user_id}) -> {last_open_time}")  
+
+    if last_open_time and last_open_time[0]:  
+        return last_open_time[0]  
+    return "2000-01-01 00:00:00.000000"  # Чтобы не было None
 
 def update_last_open_time(user_id):
     conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()  # Убедись, что создаётся курсор
-    cursor.execute("UPDATE users SET last_open_time = ? WHERE user_id = ?", (datetime.now(), user_id))
+    cursor = conn.cursor()
+    
+    formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+    print(f"[DEBUG] update_last_open_time({user_id}) -> {formatted_time}")  
+
+    cursor.execute("UPDATE users SET last_open_time = ? WHERE user_id = ?", (formatted_time, user_id))
+    
+    if cursor.rowcount == 0:  # Если обновлений не было (значит, юзера нет)
+        cursor.execute("INSERT INTO users (user_id, last_open_time) VALUES (?, ?)", (user_id, formatted_time))
+
     conn.commit()
     conn.close()
 
