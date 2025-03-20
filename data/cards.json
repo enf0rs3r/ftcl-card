@@ -1111,5 +1111,194 @@
         "rarity": "rare",
         "rating": 75,
         "price": 50
+    },
+    {
+        "card_id": 166,
+        "name": "Майсени",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 167,
+        "name": "Космос",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 168,
+        "name": "Санвекс",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 169,
+        "name": "Сайз",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 170,
+        "name": "Маквин",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 171,
+        "name": "Вхотек",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 172,
+        "name": "Митома",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 173,
+        "name": "Кобель",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 174,
+        "name": "Асок",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 175,
+        "name": "Ромарио",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 176,
+        "name": "Феликс",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 50
+    },
+    {
+        "card_id": 177,
+        "name": "Криш",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 178,
+        "name": "Фуфел",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 179,
+        "name": "Вафель",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 180,
+        "name": "Зевсов",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 181,
+        "name": "Педро",
+        "rarity": "legendary",
+        "rating": 90,
+        "price": 250
+    },
+    {
+        "card_id": 182,
+        "name": "Черноус",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 50
+    },
+    {
+        "card_id": 183,
+        "name": "Роки",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 184,
+        "name": "Тазик",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 185,
+        "name": "Легенд",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 50
+    },
+    {
+        "card_id": 186,
+        "name": "Карди",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 50
+    },
+    {
+        "card_id": 187,
+        "name": "Кириешка",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 188,
+        "name": "Волк",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 189,
+        "name": "Зерба",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 190,
+        "name": "Намикс",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 50
+    },
+    {
+        "card_id": 191,
+        "name": "Погфо",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 192,
+        "name": "Евро",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
     }
 ]
