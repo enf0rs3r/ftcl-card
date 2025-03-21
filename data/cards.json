@@ -29,7 +29,7 @@
     },
     {
         "card_id": 11,
-        "name": "Дэвис",
+        "name": "Дэвис (версия: Разор)",
         "rarity": "legendary",
         "rating": 90,
         "price": 250
@@ -1297,6 +1297,90 @@
     {
         "card_id": 192,
         "name": "Евро",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 193,
+        "name": "Фонти",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 50
+    },
+    {
+        "card_id": 194,
+        "name": "Никит",
+        "rarity": "common",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 195,
+        "name": "Ренди",
+        "rarity": "rare",
+        "rating": 75,
+        "price": 50
+    },
+    {
+        "card_id": 196,
+        "name": "Лучи",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 198,
+        "name": "Луня",
+        "rarity": "common",
+        "rating": 60,
+        "price": 10
+    },
+    {
+        "card_id": 199,
+        "name": "Сампер",
+        "rarity": "epic",
+        "rating": 85,
+        "price": 100
+    },
+    {
+        "card_id": 200,
+        "name": "Фастер",
+        "rarity": "epic",
+        "rating": 50,
+        "price": 5
+    },
+    {
+        "card_id": 201,
+        "name": "Сквизи",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 50
+    },
+    {
+        "card_id": 202,
+        "name": "Дачник",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 50
+    },
+    {
+        "card_id": 203,
+        "name": "Лионель",
+        "rarity": "epic",
+        "rating": 80,
+        "price": 100
+    },
+    {
+        "card_id": 204,
+        "name": "Зорик",
+        "rarity": "rare",
+        "rating": 70,
+        "price": 50
+    },
+    {
+        "card_id": 205,
+        "name": "Лансид",
         "rarity": "common",
         "rating": 60,
         "price": 10
